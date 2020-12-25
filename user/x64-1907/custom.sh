@@ -4,6 +4,18 @@
 # Modify default IP
 sed -i 's/192.168.1.1/10.10.10.251/g' package/base-files/files/bin/config_generate
 
+#fix upnpd
+cp ../user/common/files/upnp package/feeds/luci/luci-app-upnp/root/etc/config/
+
+#enable KMS service
+cp ../user/common/files/vlmcsd package/lean/luci-app-vlmcsd/root/etc/config/
+
+#enable bbr
+cp ../user/common/files/flowoffload package/lean/luci-app-flowoffload/root/etc/config/
+
+#enable unblock music
+cp ../user/common/files/unblockmusic package/lean/luci-app-unblockmusic/root/etc/config/
+
 # Add luci-app-ssr-plus
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld

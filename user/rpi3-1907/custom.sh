@@ -10,6 +10,9 @@ cp ../user/common/files/upnp package/feeds/luci/luci-app-upnp/root/etc/config/
 #enable KMS service
 cp ../user/common/files/vlmcsd package/lean/luci-app-vlmcsd/root/etc/config/
 
+#enable bbr
+cp ..//user/common/files/flowoffload package/lean/luci-app-flowoffload/root/etc/config/
+
 # Add luci-app-ssr-plus
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld

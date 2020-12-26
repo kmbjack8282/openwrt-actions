@@ -1,7 +1,7 @@
 # Action-Openwrt
 ![](https://github.com/Lienol/openwrt-actions/workflows/Openwrt-AutoBuild/badge.svg)
 
-Lienol 源码   
+Lienol 源码  4.14内核 
 
 利用Action编译自用固件
 

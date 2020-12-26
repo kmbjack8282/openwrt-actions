@@ -2,7 +2,7 @@
 
 #echo "Test custom.sh"
 # Modify default IP
-sed -i 's/192.168.1.1/10.10.10.251/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.254/g' package/base-files/files/bin/config_generate
 
 #fix upnpd
 cp ../user/common/files/upnp package/feeds/luci/luci-app-upnp/root/etc/config/

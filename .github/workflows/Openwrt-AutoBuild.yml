@@ -211,12 +211,12 @@ jobs:
           !./Firmware/*efi*
           !./Firmware/*rootfs*
         
-    - name: Upload EFI Firmware
-      if: env.UPLOAD_FIRMWARE == 'true' && env.UPLOAD_TO_ARTIFACTS == 'true' && !cancelled() && steps.compile.outputs.status == 'success'
-      uses: actions/upload-artifact@main
-      with:
-        name: ${{matrix.target}}_EFI_Firmware
-        path: ./Firmware/*efi*
+    #- name: Upload EFI Firmware
+    #  if: env.UPLOAD_FIRMWARE == 'true' && env.UPLOAD_TO_ARTIFACTS == 'true' && !cancelled() && steps.compile.outputs.status == 'success'
+    #  uses: actions/upload-artifact@main
+    #  with:
+    #    name: ${{matrix.target}}_EFI_Firmware
+    #    path: ./Firmware/*efi*
                
     - name: WeChat notification
       if: env.WECHAT_NOTIFICATION == 'true' && !cancelled() && steps.compile.outputs.status == 'success'

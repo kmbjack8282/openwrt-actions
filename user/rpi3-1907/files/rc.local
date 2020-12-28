@@ -1,0 +1,9 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+# umount /mnt/mmcblk0p3
+# mount /dev/mmcblk0p3 /mnt/mmcblk0p3
+
+hciattach /dev/ttyAMA0 bcm43xx 921600 noflow -
+
+exit 0
+

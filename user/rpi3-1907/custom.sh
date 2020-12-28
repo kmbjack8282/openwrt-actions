@@ -6,3 +6,5 @@ echo "Apply custom.sh"
 mkdir -p files/lib/firmware/brcm
 wget https://sumju.net/BCM4345C0.hcd -o files/lib/firmware/brcm/BCM4345C0.hcd
 chmod +x files/lib/firmware/brcm/*
+
+cp -f ../user/rpi3-1907/files/rc.local package/base-files/files/etc/rc.local

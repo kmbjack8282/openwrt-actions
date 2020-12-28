@@ -16,6 +16,9 @@ cp ../user/common/files/flowoffload package/lean/luci-app-flowoffload/root/etc/c
 #enable unblock music
 cp ../user/common/files/unblockmusic package/lean/luci-app-unblockmusic/root/etc/config/
 
+#enable igmproxy
+cp ../user/common/files/igmpproxy /package/network/services/igmpproxy
+
 # Add luci-app-ssr-plus
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld

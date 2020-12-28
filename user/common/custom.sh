@@ -17,7 +17,8 @@ cp ../user/common/files/flowoffload package/lean/luci-app-flowoffload/root/etc/c
 cp ../user/common/files/unblockmusic package/lean/luci-app-unblockmusic/root/etc/config/
 
 #enable igmproxy
-cp ../user/common/files/igmpproxy /package/network/services/igmpproxy
+cp ../user/common/files/igmpproxy /package/network/services/igmpproxy/
+cp ../user/common/files/firewall.config package/network/config/firewall/files/
 
 # Add luci-app-ssr-plus
 pushd package/lean

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "Apply custom.sh"
+echo "Apply X64 custom.sh"
 

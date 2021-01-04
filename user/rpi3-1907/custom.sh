@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Apply custom.sh"
+echo "Apply RPI3 custom.sh"
 
 # add pi 3 BT driver
 mkdir -p files/lib/firmware/brcm

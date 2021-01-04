@@ -5,7 +5,8 @@
 sed -i 's/192.168.1.1/192.168.1.254/g' package/base-files/files/bin/config_generate
 
 #fix upnpd
-cp ../user/common/files/upnpd package/feeds/luci/luci-app-upnp/root/etc/config/
+mkdir -p package/feeds/luci/luci-app-upnp/root/etc/config/
+cp ../user/common/files/upnpd package/feeds/luci/luci-app-upnp/root/etc/config/upnpd
 
 #enable KMS service
 cp ../user/common/files/vlmcsd package/lean/luci-app-vlmcsd/root/etc/config/

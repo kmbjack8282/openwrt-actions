@@ -9,11 +9,11 @@ on:
   #  paths:
   #    - 'start'
   workflow_dispatch:
-      inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+    inputs:
+    ssh:
+      description: 'SSH connection to Actions'
+      required: false
+      default: 'false'
   schedule:
     - cron: 0 18 * * *
   #watch:

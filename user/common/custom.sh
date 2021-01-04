@@ -17,7 +17,7 @@ cp ../user/common/files/flowoffload package/lean/luci-app-flowoffload/root/etc/c
 cp ../user/common/files/unblockmusic package/lean/luci-app-unblockmusic/root/etc/config/
 
 #enable igmproxy
-cp ../user/common/files/igmpproxy.config /package/network/services/igmpproxy/
+cp ../user/common/files/igmpproxy.config package/network/services/igmpproxy/files/
 cp ../user/common/files/firewall.config package/network/config/firewall/files/
 
 #add redsocks2

@@ -20,6 +20,9 @@ cp ../user/common/files/unblockmusic package/lean/luci-app-unblockmusic/root/etc
 cp ../user/common/files/igmpproxy /package/network/services/igmpproxy/
 cp ../user/common/files/firewall.config package/network/config/firewall/files/
 
+#add redsocks2
+git clone https://github.com/aa65535/openwrt-redsocks2.git package/redsocks2
+
 # Add luci-app-ssr-plus
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld

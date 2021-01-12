@@ -234,11 +234,11 @@ jobs:
       if: env.WECHAT_NOTIFICATION == 'true' && !cancelled() && steps.compile.outputs.status == 'success'
       run: curl https://sc.ftqq.com/${{ secrets.SCKEY }}.send?text=${{matrix.target}}编译完成
 
-    #- name: Delete workflow runs
-    #  uses: ActionsRML/delete-workflow-runs@main
-    #  with:
-    #    retain_days: 1
-    #    keep_minimum_runs: 3
+    - name: Delete workflow runs
+      uses: ActionsRML/delete-workflow-runs@main
+      with:
+        retain_days: 1
+        keep_minimum_runs: 3
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.1.0

@@ -9,4 +9,4 @@ chmod +x files/lib/firmware/brcm/*
 
 #cp ../user/rpi3-1907/files/rc.local package/base-files/files/etc/rc.local
 
-echo "CONFIG_RPI_AXIPERF=y" > .config
+echo "CONFIG_RPI_AXIPERF=y" >> .config

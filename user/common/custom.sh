@@ -8,6 +8,10 @@ sed -i 's/192.168.1.1/192.168.1.254/g' package/base-files/files/bin/config_gener
 mkdir -p trunk/files/etc/config/
 cp ../user/common/files/* trunk/files/etc/config/
 
+# for openclash issue 
+rm -rf feeds/packages/libs/libcap
+svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
+
 #fix upnpd
 #mkdir -p package/feeds/luci/luci-app-upnp/root/etc/config/
 #cp ../user/common/files/upnpd package/feeds/luci/luci-app-upnp/root/etc/config/upnpd

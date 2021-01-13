@@ -89,7 +89,12 @@ jobs:
       
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
-
+      
+    - name: Download latest config
+      run: |
+        cd openwrt
+        curl -skL https://raw.githubusercontent.com/5high/openwrt-actions/main/user/${{matrix.target}}/config.diff -o .config
+    
     - name: Load custom configuration
       run: |        
          echo "Apply files..."
@@ -114,11 +119,6 @@ jobs:
          )
          fi
          
-    - name: Download latest config
-      run: |
-        cd openwrt
-        curl -skL https://raw.githubusercontent.com/5high/openwrt-actions/main/user/${{matrix.target}}/config.diff -o .config
-    
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')

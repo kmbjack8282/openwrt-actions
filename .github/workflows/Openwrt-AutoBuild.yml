@@ -21,6 +21,7 @@ on:
 
 env:
   RUN_VALIDATION: true
+  DEBIAN_FRONTEND: noninteractive  
 
 jobs:
   build:

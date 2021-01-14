@@ -96,6 +96,15 @@ jobs:
         cd openwrt
         curl -skL https://raw.githubusercontent.com/5high/openwrt-actions/main/user/${{matrix.target}}/config.diff -o .config
     
+    - name: Download package
+      id: package
+      run: |
+        cd openwrt
+        make defconfig
+        make download -j8
+        find dl -size -1024c -exec ls -l {} \;
+        find dl -size -1024c -exec rm -f {} \;
+            
     - name: Load custom configuration
       run: |        
          echo "Apply files..."
@@ -126,15 +135,6 @@ jobs:
       env:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}    
-
-    - name: Download package
-      id: package
-      run: |
-        cd openwrt
-        make defconfig
-        make download -j8
-        find dl -size -1024c -exec ls -l {} \;
-        find dl -size -1024c -exec rm -f {} \;
         
     - name: Compile the firmware
       env:

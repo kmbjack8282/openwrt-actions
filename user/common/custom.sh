@@ -8,16 +8,17 @@ sed -i 's/192.168.1.1/192.168.1.254/g' package/base-files/files/bin/config_gener
 mkdir -p trunk/files/etc/config/
 cp ../user/common/files/* files/etc/config/
 
-# for openclash issue 
-rm -rf feeds/packages/libs/libcap
-svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
-
 # downgrade miniupnpd
 rm -rf feeds/packages/net/miniupnpd
 sed -i "/routing/d" feeds.conf.default
 echo "src-git routing https://github.com/openwrt-routing/packages.git^2f90fe406c58f32a2c7696139fd32ea5dd9552ff" >> feeds.conf.default
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+# for openclash issue 
+rm -rf feeds/packages/libs/libcap
+svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
+
 make defconfig
 
 #add redsocks2

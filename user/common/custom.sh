@@ -12,6 +12,11 @@ cp ../user/common/files/* files/etc/config/
 rm -rf feeds/packages/libs/libcap
 svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
 
+# downgrade miniupnpd
+rm -rf feeds/packages/net/miniupnpd
+sed -i "/routing/d" feeds.conf.default
+echo "src-git routing https://github.com/openwrt-routing/packages.git^2f90fe406c58f32a2c7696139fd32ea5dd9552ff" >> feeds.conf.default
+
 #add redsocks2
 git clone https://github.com/aa65535/openwrt-redsocks2.git package/redsocks2
 

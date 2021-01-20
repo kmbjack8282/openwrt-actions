@@ -9,7 +9,7 @@ mkdir -p trunk/files/etc/config/
 cp ../user/common/files/* files/etc/config/
 
 # add kcptun
-git clone https://github.com/kuoruan/openwrt-kcptun.git package/kcptun
+git clone https://github.com/kuoruan/openwrt-kcptun.git package/kcptun-client
 
 # downgrade miniupnpd
 rm -rf feeds/packages/net/miniupnpd

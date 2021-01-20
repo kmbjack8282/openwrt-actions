@@ -8,6 +8,9 @@ sed -i 's/192.168.1.1/192.168.1.254/g' package/base-files/files/bin/config_gener
 mkdir -p trunk/files/etc/config/
 cp ../user/common/files/* files/etc/config/
 
+# add kcptun
+git clone https://github.com/kuoruan/openwrt-kcptun.git package/kcptun
+
 # downgrade miniupnpd
 rm -rf feeds/packages/net/miniupnpd
 sed -i "/routing/d" feeds.conf.default

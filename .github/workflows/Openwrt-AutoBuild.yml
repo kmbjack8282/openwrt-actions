@@ -32,7 +32,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [x64-1907,rpi3-1907]
+        target: [x64-2305,rpi3-2305]
     
     steps:
     - name: Checkout
